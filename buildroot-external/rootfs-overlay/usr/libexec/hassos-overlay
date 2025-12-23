@@ -18,3 +18,12 @@ if [ ! -f /mnt/overlay/etc/systemd/timesyncd.conf ]; then
     mkdir -p /mnt/overlay/etc/systemd
     cp -fp /etc/systemd/timesyncd.conf /mnt/overlay/etc/systemd/timesyncd.conf
 fi
+
+if [ ! -L /mnt/overlay/etc/localtime ]; then
+    ln -sf /usr/share/zoneinfo/Etc/UTC /mnt/overlay/etc/localtime
+fi
+
+# Console
+if [ ! -f /mnt/overlay/etc/vconsole.conf ]; then
+    echo "KEYMAP=us" > /mnt/overlay/etc/vconsole.conf
+fi
