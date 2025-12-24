@@ -49,7 +49,7 @@ if [ -z "${SUPERVISOR_IMAGE_ID}" ]; then
     # information.
     if [ "${SUPERVISOR_VERSION}" = "stable" ]; then
         # SUPERVISOR_VERSION="$(curl -s --location https://version.home-assistant.io/stable.json | jq -e -r '.supervisor')"
-        SUPERVISOR_VERSION="$(curl -s --location https://my-smart-homes.github.io/version-data/data.json | jq -e -r '.supervisor')"
+        SUPERVISOR_VERSION="$(curl -s --location https://my-smart-homes.github.io/version/data.json | jq -e -r '.supervisor')"
     fi
 
     echo "[WARNING] Supervisor image missing, downloading a fresh one: ${SUPERVISOR_VERSION}"
