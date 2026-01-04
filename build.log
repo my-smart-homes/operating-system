@@ -1,0 +1,212 @@
+[7m=== Using generic_x86_64_defconfig ===[m
+make -C /home/fitl/git/me/outsource/mha/operating-system/buildroot O=/home/fitl/git/me/outsource/mha/operating-system/output BR2_EXTERNAL=/home/fitl/git/me/outsource/mha/operating-system/buildroot-external "generic_x86_64_defconfig"
+make[1]: Entering directory '/home/fitl/git/me/outsource/mha/operating-system/buildroot'
+  GEN     /home/fitl/git/me/outsource/mha/operating-system/output/Makefile
+#
+# configuration written to /home/fitl/git/me/outsource/mha/operating-system/output/.config
+#
+make[1]: Leaving directory '/home/fitl/git/me/outsource/mha/operating-system/buildroot'
+[7m=== Building generic_x86_64 ===[m
+make -C /home/fitl/git/me/outsource/mha/operating-system/buildroot O=/home/fitl/git/me/outsource/mha/operating-system/output BR2_EXTERNAL=/home/fitl/git/me/outsource/mha/operating-system/buildroot-external
+make[1]: Entering directory '/home/fitl/git/me/outsource/mha/operating-system/buildroot'
+/usr/bin/make -j1  O=/home/fitl/git/me/outsource/mha/operating-system/output HOSTCC="/usr/bin/gcc" HOSTCXX="/usr/bin/g++" syncconfig
+  GEN     /home/fitl/git/me/outsource/mha/operating-system/output/Makefile
+automake-1.16.5.tar.xz: OK (sha256: f01d58cd6d9d77fbdca9eb4bbd5ead1988228fdb73d6f7a201f5f8d6b118b469)
+[7m>>> host-automake 1.16.5 Extracting[m
+xzcat /cache/dl/automake/automake-1.16.5.tar.xz | tar --strip-components=1 -C /home/fitl/git/me/outsource/mha/operating-system/output/build/host-automake-1.16.5   -xf -
+[7m>>> host-automake 1.16.5 Patching[m
+
+Applying 0001-noman.patch using patch: 
+patching file Makefile.in
+Hunk #1 succeeded at 3415 (offset 28 lines).
+Hunk #2 succeeded at 3482 (offset 28 lines).
+[7m>>> host-automake 1.16.5 Updating config.sub and config.guess[m
+for file in config.guess config.sub; do for i in $(find /home/fitl/git/me/outsource/mha/operating-system/output/build/host-automake-1.16.5 -name $file); do cp support/gnuconfig/$file $i; done; done
+[7m>>> host-automake 1.16.5 Patching libtool[m
+[7m>>> host-automake 1.16.5 Configuring[m
+(cd /home/fitl/git/me/outsource/mha/operating-system/output/build/host-automake-1.16.5/ && rm -rf config.cache; GIT_DIR=. PATH="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin:/home/fitl/git/me/outsource/mha/operating-system/output/host/sbin:/home/fitl/.local/bin:/home/fitl/.opencode/bin:/home/fitl/.nvm/versions/node/v24.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin" PKG_CONFIG="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/fitl/git/me/outsource/mha/operating-system/output/host/lib/pkgconfig:/home/fitl/git/me/outsource/mha/operating-system/output/host/share/pkgconfig" AR="/usr/bin/ar" AS="/usr/bin/as" LD="/usr/bin/ld" NM="/usr/bin/nm" CC="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc" GCC="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc" CXX="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/g++" CPP="/usr/bin/cpp" OBJCOPY="/usr/bin/objcopy" RANLIB="/usr/bin/ranlib" CPPFLAGS="-I/home/fitl/git/me/outsource/mha/operating-system/output/host/include" CFLAGS="-O2 -I/home/fitl/git/me/outsource/mha/operating-system/output/host/include" CXXFLAGS="-O2 -I/home/fitl/git/me/outsource/mha/operating-system/output/host/include" LDFLAGS="-L/home/fitl/git/me/outsource/mha/operating-system/output/host/lib -Wl,-rpath,/home/fitl/git/me/outsource/mha/operating-system/output/host/lib" INTLTOOL_PERL=/usr/bin/perl  CONFIG_SITE=/dev/null ./configure --prefix="/home/fitl/git/me/outsource/mha/operating-system/output/host" --sysconfdir="/home/fitl/git/me/outsource/mha/operating-system/output/host/etc" --localstatedir="/home/fitl/git/me/outsource/mha/operating-system/output/host/var" --enable-shared --disable-static --disable-gtk-doc --disable-gtk-doc-html --disable-doc --disable-docs --disable-documentation --disable-debug --with-xmlto=no --with-fop=no --disable-nls --disable-dependency-tracking   )
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-nls, --disable-dependency-tracking
+checking whether make supports nested variables... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether ln -s works... yes
+checking for perl... /usr/bin/perl
+checking for tex... tex
+checking for yacc... yacc
+checking for lex... lex
+checking whether autoconf is installed... yes
+checking whether autoconf works... yes
+checking whether autoconf is recent enough... yes
+checking whether ln works... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+configure: will now look for a sturdy POSIX shell, for our testsuite
+checking for sh... /usr/bin/sh
+checking for sh5... no
+checking for dash... /usr/bin/dash
+checking for ash... no
+checking for bash... /usr/bin/bash
+checking for zsh... /usr/bin/zsh
+checking for ksh... no
+checking for pdksh... no
+checking whether /bin/bash supports $(cmd)... yes
+checking whether /bin/bash supports $((expr))... yes
+checking whether /bin/bash supports ${#var}... yes
+checking whether /bin/bash supports ${var#glob} and ${var%glob}... yes
+checking whether /bin/bash preserves exit traps with "set -e"... yes
+checking whether /bin/bash can define exit traps in a shell function... yes
+checking whether /bin/bash corrupts stderr with "set -x"... no
+checking whether /bin/bash can return early from "dot-sourced" files... yes
+checking whether /bin/bash supports alias named like shell builtins... yes
+checking whether /bin/bash supports "test -e"... yes
+configure: shell /bin/bash is good enough, stop looking
+configure: will use /bin/bash as the testsuite shell
+configure: will now look for generic compilers
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc accepts -g... yes
+checking for /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc option to enable C11 features... none needed
+checking whether /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc understands -c and -o together... yes
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/g++ accepts -g... yes
+checking for /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/g++ option to enable C++11 features... none needed
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgfortran... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking for nagfor... no
+checking for xlf90... no
+checking for f90... no
+checking for armflang... no
+checking for flang... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for g95... no
+checking for gfortran... no
+checking whether the Fortran compiler works... no
+configure: WARNING: Fortran compiler cannot create executables
+configure: tests requiring the Fortran compiler will be skipped
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for g77... no
+checking for armflang... no
+checking for flang... no
+checking for gfortran... no
+checking whether the Fortran 77 compiler works... no
+configure: WARNING: Fortran 77 compiler cannot create executables
+configure: tests requiring the Fortran 77 compiler will be skipped
+configure: will now look for GNU compilers
+configure: /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/gcc is already a GNU C compiler
+configure: /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/ccache /usr/bin/g++ is already a GNU C++ compiler
+checking for gfortran... no
+checking for g77... no
+checking for gfortran... no
+checking for gcj... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating pre-inst-env
+configure: WARNING: unrecognized options: --enable-shared, --disable-static, --disable-gtk-doc, --disable-gtk-doc-html, --disable-doc, --disable-docs, --disable-documentation, --disable-debug, --with-xmlto, --with-fop, --disable-nls, --disable-dependency-tracking
+[7m>>> host-automake 1.16.5 Building[m
+GIT_DIR=. PATH="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin:/home/fitl/git/me/outsource/mha/operating-system/output/host/sbin:/home/fitl/.local/bin:/home/fitl/.opencode/bin:/home/fitl/.nvm/versions/node/v24.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin" PKG_CONFIG="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/fitl/git/me/outsource/mha/operating-system/output/host/lib/pkgconfig:/home/fitl/git/me/outsource/mha/operating-system/output/host/share/pkgconfig"  /usr/bin/make -j17  -C /home/fitl/git/me/outsource/mha/operating-system/output/build/host-automake-1.16.5/
+  GEN      bin/automake
+  GEN      bin/aclocal
+  GEN      t/ax/shell-no-trail-bslash
+  GEN      t/ax/cc-no-c-o
+  GEN      runtest
+  GEN      lib/Automake/Config.pm
+  GEN      t/ax/test-defs.sh
+  GEN      bin/aclocal-1.16
+  GEN      bin/automake-1.16
+[7m>>> host-automake 1.16.5 Installing to host directory[m
+GIT_DIR=. PATH="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin:/home/fitl/git/me/outsource/mha/operating-system/output/host/sbin:/home/fitl/.local/bin:/home/fitl/.opencode/bin:/home/fitl/.nvm/versions/node/v24.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin" PKG_CONFIG="/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/pkg-config" PKG_CONFIG_SYSROOT_DIR="/" PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 PKG_CONFIG_ALLOW_SYSTEM_LIBS=1 PKG_CONFIG_LIBDIR="/home/fitl/git/me/outsource/mha/operating-system/output/host/lib/pkgconfig:/home/fitl/git/me/outsource/mha/operating-system/output/host/share/pkgconfig"  /usr/bin/make -j17 install -C /home/fitl/git/me/outsource/mha/operating-system/output/build/host-automake-1.16.5/
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/am'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal-1.16'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal-1.16/internal'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/doc/automake'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/Automake'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16'
+ /usr/bin/install -c bin/automake bin/aclocal '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin'
+ /usr/bin/install -c -m 644 lib/am/check.am lib/am/check2.am lib/am/clean-hdr.am lib/am/clean.am lib/am/compile.am lib/am/configure.am lib/am/data.am lib/am/dejagnu.am lib/am/depend.am lib/am/depend2.am lib/am/distdir.am lib/am/footer.am lib/am/header-vars.am lib/am/header.am lib/am/install.am lib/am/inst-vars.am lib/am/java.am lib/am/lang-compile.am lib/am/lex.am lib/am/library.am lib/am/libs.am lib/am/libtool.am lib/am/lisp.am lib/am/ltlib.am lib/am/ltlibrary.am lib/am/mans-vars.am lib/am/mans.am lib/am/program.am lib/am/progs.am lib/am/python.am lib/am/remake-hdr.am lib/am/scripts.am lib/am/subdirs.am lib/am/tags.am lib/am/texi-vers.am lib/am/texibuild.am lib/am/texinfos.am lib/am/vala.am lib/am/yacc.am '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/am'
+ /usr/bin/install -c -m 644 m4/amversion.m4 m4/ar-lib.m4 m4/as.m4 m4/auxdir.m4 m4/cond.m4 m4/cond-if.m4 m4/depend.m4 m4/depout.m4 m4/dmalloc.m4 m4/extra-recurs.m4 m4/gcj.m4 m4/init.m4 m4/install-sh.m4 m4/lead-dot.m4 m4/lex.m4 m4/lispdir.m4 m4/maintainer.m4 m4/make.m4 m4/missing.m4 m4/mkdirp.m4 m4/obsolete.m4 m4/options.m4 m4/python.m4 m4/prog-cc-c-o.m4 m4/runlog.m4 m4/sanity.m4 m4/silent.m4 m4/strip.m4 m4/substnot.m4 m4/tar.m4 m4/upc.m4 m4/vala.m4 '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal-1.16'
+ /usr/bin/install -c -m 644 ./doc/amhello-1.0.tar.gz '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/doc/automake'
+ /usr/bin/install -c -m 644 m4/internal/ac-config-macro-dirs.m4 '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal-1.16/internal'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16'
+ /usr/bin/install -c -m 644 lib/Automake/ChannelDefs.pm lib/Automake/Channels.pm lib/Automake/Condition.pm lib/Automake/Configure_ac.pm lib/Automake/DisjConditions.pm lib/Automake/FileUtils.pm lib/Automake/General.pm lib/Automake/Getopt.pm lib/Automake/Item.pm lib/Automake/ItemDef.pm lib/Automake/Language.pm lib/Automake/Location.pm lib/Automake/Options.pm lib/Automake/Rule.pm lib/Automake/RuleDef.pm lib/Automake/Variable.pm lib/Automake/VarDef.pm lib/Automake/Version.pm lib/Automake/XFile.pm lib/Automake/Wrap.pm '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/Automake'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal'
+ /usr/bin/install -c -m 644 lib/COPYING lib/INSTALL lib/texinfo.tex '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16'
+ /usr/bin/install -c -m 644 lib/config.guess lib/config.sub lib/install-sh lib/mdate-sh lib/missing lib/mkinstalldirs lib/ylwrap lib/depcomp lib/compile lib/py-compile lib/ar-lib lib/test-driver lib/tap-driver.sh '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16'
+/usr/bin/make  install-exec-hook
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/Automake'
+ /usr/bin/install -c -m 644 m4/acdir/README '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal'
+ /usr/bin/mkdir -p '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info'
+ /usr/bin/install -c -m 644 lib/Automake/Config.pm '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/Automake'
+ /usr/bin/install -c -m 644 ./doc/automake.info ./doc/automake.info-1 ./doc/automake.info-2 ./doc/automake-history.info '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info'
+ install-info --info-dir='/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info' '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info/automake.info'
+ install-info --info-dir='/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info' '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/info/automake-history.info'
+/usr/bin/make  install-data-hook
+ ln '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/automake' '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/automake-1.16'
+ ln '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/aclocal' '/home/fitl/git/me/outsource/mha/operating-system/output/host/bin/aclocal-1.16'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/config.guess'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/config.sub'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/install-sh'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/mdate-sh'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/missing'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/mkinstalldirs'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/ylwrap'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/depcomp'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/compile'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/py-compile'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/ar-lib'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/test-driver'
+ chmod +x '/home/fitl/git/me/outsource/mha/operating-system/output/host/share/automake-1.16/tap-driver.sh'
+/usr/bin/install -D -m 0644 package/automake/gtk-doc.m4 /home/fitl/git/me/outsource/mha/operating-system/output/host/share/aclocal/gtk-doc.m4
+mkdir -p /home/fitl/git/me/outsource/mha/operating-system/output/host/x86_64-buildroot-linux-gnu/sysroot/usr/share/aclocal
+[7m>>> host-util-linux 2.40.2 Configuring[m
+[7m>>> host-util-linux 2.40.2 Autoreconfiguring[m
+Segmentation fault (core dumped)
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'config'.
+libtoolize: copying file 'config/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:13: installing 'config/compile'
+configure.ac:14: installing 'config/missing'
+Makefile.am: installing 'config/depcomp'
+autoreconf: error: /home/fitl/git/me/outsource/mha/operating-system/output/host/bin/automake terminated by signal: 11
+make[2]: *** [package/pkg-generic.mk:262: /home/fitl/git/me/outsource/mha/operating-system/output/build/host-util-linux-2.40.2/.stamp_configured] Error 1
+make[1]: *** [Makefile:83: _all] Error 2
+make[1]: Leaving directory '/home/fitl/git/me/outsource/mha/operating-system/buildroot'
+make: *** [Makefile:56: generic_x86_64] Error 2

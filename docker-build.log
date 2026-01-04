@@ -1,0 +1,12 @@
+=== Using generic_x86_64_defconfig ===
+WARNING: Output directory '/build/output' already contains files for another target!
+         Before running build for a different target, run 'make distclean' first.
+
+/usr/bin/make -C /build/buildroot O=/build/output BR2_EXTERNAL=/build/buildroot-external "generic_x86_64_defconfig"
+make[1]: Entering directory '/build/buildroot'
+  GEN     /build/output/Makefile
+/build/output/build/buildroot-config/conf: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /build/output/build/buildroot-config/conf)
+/build/output/build/buildroot-config/conf: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.34' not found (required by /build/output/build/buildroot-config/conf)
+make[1]: *** [Makefile:1025: generic_x86_64_defconfig] Error 1
+make[1]: Leaving directory '/build/buildroot'
+make: *** [Makefile:47: generic_x86_64-config] Error 2

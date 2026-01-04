@@ -24,7 +24,7 @@ function write_rauc_config() {
 
     (
         "${HOST_DIR}/bin/tempio" \
-            -template "${BR2_EXTERNAL_HASSOS_PATH}/ota/system.conf.gtpl"
+            -template "${BR2_EXTERNAL_HASSOS_PATH}/ota/system.conf.gtpl" < /dev/null
     ) > "${TARGET_DIR}/etc/rauc/system.conf"
 }
 

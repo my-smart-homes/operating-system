@@ -11,13 +11,15 @@ HASSIO_SITE = $(BR2_EXTERNAL_HASSOS_PATH)/package/hassio
 HASSIO_SITE_METHOD = local
 # Custom version endpoint - does not use channel suffix
 HASSIO_VERSION_URL = "https://my-smart-homes.github.io/version-data/data.json"
-# Channel variable kept for compatibility but not used in URL
+# Channel for AppArmor profile download from Home Assistant
 ifeq ($(BR2_PACKAGE_HASSIO_CHANNEL_STABLE),y)
-HASSIO_VERSION_CHANNEL = ""
+HASSIO_VERSION_CHANNEL = stable
 else ifeq ($(BR2_PACKAGE_HASSIO_CHANNEL_BETA),y)
-HASSIO_VERSION_CHANNEL = ""
+HASSIO_VERSION_CHANNEL = beta
 else ifeq ($(BR2_PACKAGE_HASSIO_CHANNEL_DEV),y)
-HASSIO_VERSION_CHANNEL = ""
+HASSIO_VERSION_CHANNEL = dev
+else
+HASSIO_VERSION_CHANNEL = stable
 endif
 
 HASSIO_CONTAINER_IMAGES_ARCH = supervisor dns audio cli multicast observer core
