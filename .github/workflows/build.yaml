@@ -64,7 +64,7 @@ jobs:
         env:
           PUBLISH_FLAG: ${{ inputs.publish }}
         run: |
-          if [ "${{ github.repository }}" == "home-assistant/operating-system" ]; then
+          if [ "${{ github.repository }}" == "my-smart-homes/operating-system" ]; then
             if [ "${PUBLISH_FLAG}" != "true" ] && [ "${{ github.event_name }}" != "release" ]; then
               echo "publish_build=false" >> "$GITHUB_OUTPUT"
             else
@@ -446,7 +446,7 @@ jobs:
     name: Update artifacts index
     if: ${{ github.event_name != 'release' && needs.prepare.outputs.publish_build == 'true' }}
     needs: [ build, prepare ]
-    uses: home-assistant/operating-system/.github/workflows/artifacts-index.yaml@dev
+    uses: ./.github/workflows/artifacts-index.yaml
     with:
       version: ${{ needs.prepare.outputs.version_full }}
     secrets:
@@ -459,7 +459,7 @@ jobs:
 
   bump_version:
     name: Bump ${{ needs.prepare.outputs.channel }} channel version
-    if: ${{ github.repository == 'home-assistant/operating-system' && needs.prepare.outputs.publish_build == 'true' && (needs.prepare.outputs.channel != 'dev' || github.ref == 'refs/heads/dev') }}
+    if: ${{ github.repository == 'my-smart-homes/operating-system' && needs.prepare.outputs.publish_build == 'true' && (needs.prepare.outputs.channel != 'dev' || github.ref == 'refs/heads/dev') }}
     environment: ${{ needs.prepare.outputs.channel }}
     needs: [ build, prepare ]
     runs-on: ubuntu-22.04
